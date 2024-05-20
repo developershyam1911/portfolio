@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import dynamic from 'next/dynamic'
+import Script from "next/script";
  
 const Header = dynamic(() => import('@/components/Header'), { ssr: false })
 const Footer = dynamic(() => import('@/components/Footer'), { ssr: false })
@@ -54,9 +55,9 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </main>
-        <script src="assets/js/vendor.min.js"></script>
-        <script src="assets/js/plugins.min.js"></script>  
-        <script src="assets/js/main.js"></script>
+        <Script src="assets/js/vendor.min.js"></Script>
+        <Script src="assets/js/plugins.min.js"></Script>
+        <Script src="assets/js/main.js"></Script>
       </body>
     </html>
   );

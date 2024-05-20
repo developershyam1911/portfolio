@@ -2,8 +2,6 @@
 import Link from "next/link"
 import { collection, getDocs, orderBy, query, where } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react'
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
 import dayjs from "dayjs";
 import init from "@/firebase";
 import Image from "next/image";
@@ -11,15 +9,13 @@ import { FaFacebookF, FaInstagram, FaLinkedin, FaUser } from "react-icons/fa";
 import { MdCalendarMonth, MdFacebook, MdKeyboardDoubleArrowRight, MdSearch } from "react-icons/md";
 const BlogList = () => {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false)
   const getBlogs = async () => {
     try {
-      setLoading(true)
       const mycollection = collection(init.db, "blogs");
       let q = query(mycollection, orderBy('createdAt', 'desc'));
       const data = await getDocs(q);
       setData(data.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
-      setLoading(false)
+
     } catch (err) {
       console.log('Error', err);
     }
@@ -104,21 +100,9 @@ const BlogList = () => {
               </div>
               <div className="col-xl-8 col-lg-7">
                 <div className="blog-list">
+                 
                   {
-                    loading && (
-                      data?.map((_, i) => {
-                        return (
-                          <div className='mb-2 p-3' key={i}>
-                            <SkeletonTheme highlightColor="#ccc" baseColor="#EEFFFD">
-                              <Skeleton height={200} width={750} />
-                            </SkeletonTheme>
-                          </div>
-                        )
-                      })
-                    )
-                  }
-                  {
-                    data.map((item, index) => {
+                    data?.map((item, index) => {
                       return (
                         <div className="blog-list-single-item" key={index}>
                           <div className="inner-shape inner-shape-top-right"></div>
