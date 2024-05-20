@@ -59,7 +59,7 @@ const ProjectList = () => {
                             {
                                     data?.map((item, index)=>{
                                         return(
-                                            <div class="col-md-6  filter-item industwordpressrial">
+                                            <div class="col-md-6  filter-item industwordpressrial" key={index}>
                                     <div class="project-box-single-item">
                                         <div class="img-box">
                                             <div class="bg-overlay"></div>

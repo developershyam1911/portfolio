@@ -36,7 +36,7 @@ const SingleBlog = ({ slug }) => {
     useEffect(() => {
         getBlogs();
         getRecentBlogs()
-    }, []);
+    }, [slug]);
     return (
         <>
             <div className="breadcrumb-section section-bg overflow-hidden pos-relative">
@@ -87,7 +87,7 @@ const SingleBlog = ({ slug }) => {
                                                     return (
                                                         <li key={index}>
                                                             <Link href={`/blog/${item.slug}`} className="">
-                                                    <Image src={item.image} height={80} width={80} quality={90} className="img-fluid" alt="Developer Shyam" style={{height: '80px', width: '80px',  borderRadius: '50%', border: "2px solid #fff" }} />
+                                                           <Image src={item.image} height={80} width={80} quality={90} className="img-fluid" alt="Developer Shyam" style={{height: '80px', width: '80px',  borderRadius: '50%', border: "2px solid #fff" }} />
                                                             </Link>
                                                             <div className="content">
                                                                 <p className="title" style={{ textAlign: 'justify', fontSize: '14px', fontWeight: '500' }}><Link href={`/blog/${item.slug}`}>{item.title}</Link></p>

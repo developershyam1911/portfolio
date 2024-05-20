@@ -106,9 +106,9 @@ const BlogList = () => {
                 <div className="blog-list">
                   {
                     loading && (
-                      data?.map(() => {
+                      data?.map((_, i) => {
                         return (
-                          <div className='mb-2 p-3'>
+                          <div className='mb-2 p-3' key={i}>
                             <SkeletonTheme highlightColor="#ccc" baseColor="#EEFFFD">
                               <Skeleton height={200} width={750} />
                             </SkeletonTheme>
