@@ -59,19 +59,20 @@ const Testimonial = () => {
                                                         {/* <div class="inner-shape inner-shape-top-right"></div> */}
                                                         <div class="">
                                                             <span class="icon">“</span>
-                                                            <p class="">{item.review}</p>
                                                             <div class="info">
                                                                 <div class="author">
                                                                     <h4 class="name">{item.name}</h4>
+                                                                    <p class="">{item.review}</p>
                                                                     <span class="designation">{item.deg}</span>
                                                                 </div>
-                                                                <ul class="review">
+                                                               
+                                                            </div>
+                                                            <ul class="review">
                                                                     <li class="fill"><MdStar size={22}/></li>
                                                                     <li class="fill"><MdStar size={22}/></li>
                                                                     <li class="fill"><MdStar size={22}/></li>
                                                                     <li class="fill"><MdStar size={22}/></li>
                                                                 </ul>
-                                                            </div>
                                                         </div>
                                                     </div>
                                             </SwiperSlide>

@@ -62,7 +62,7 @@ const Projects = () => {
                                                             <div className="bg-image">
                                                                 <Image src={item.image} height={250} width={400} quality={90} className="img-fluid" alt="Developer Shyam" />
                                                             </div>
-                                                            <div className="">
+                                                            <div className="image">     
                                                                 <Image src={item.image} height={250} width={400} quality={90} className="img-fluid" alt="Developer Shyam" />
                                                             </div>
                                                         </div>

@@ -16,12 +16,12 @@ const Intro = () => {
                         <h2 className="title-large">{process.env.NEXT_PUBLIC_NAME}</h2>
                         <p>Full Stack Developer </p>
                         <a href={process.env.NEXT_PUBLIC_RESUME} className="btn btn-xl btn-outline-one icon-space-left">Get Resume <MdDownload size={22}/></a>
-                        <div className="video-link">
+                        {/* <div className="video-link">
                             <a className="wave-btn" href="https://youtu.be/MKjhBO2xQzg" data-autoplay="true" data-vbtype="video">
                                 <div className="ripple"><MdPlayCircle size={22}/></div>
                             </a>
                             <span className="video-text"> Watch Video</span>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

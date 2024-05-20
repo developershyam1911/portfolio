@@ -80,10 +80,10 @@ const Service = () => {
                                             <div className='col-md-4 shadow p-2' key={index}>
                                                 <div className="service-box-single-item swiper-slide">
                                                     <div className="inner-shape inner-shape-top-right"></div>
-                                                    <div className="">
-                                                    <Image src={item.image} height={120} width={120} quality={90} className="img-fluid" alt="Developer Shyam" />
+                                                    <div className="mb-2">
+                                                    <Image src={item.image} height={50} width={50} quality={90} className="img-fluid" alt="Developer Shyam" />
                                                         </div>
-                                                    <h4 className="title"><a href="service-details.html">{item.title}</a></h4>
+                                                    <h4 className="title">{item.title}</h4>
                                                     <ul className="list-item">
                                                         <li>{item.skill1}</li>
                                                         <li>{item.skill2}</li>
