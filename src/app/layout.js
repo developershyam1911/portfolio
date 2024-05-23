@@ -35,7 +35,7 @@ export async function generateMetadata() {
     openGraph: {
       title: 'Software Engineer - Shyam Mishra | DevShyamTech',
       description: 'Welcome to the portfolio of Shyam Mishra, a skilled software engineer specializing in web development, software solutions, and more.',
-      images: '/assets/images/logo/ogImage.jpg',
+      images: 'https://portfolio-jft8.vercel.app/assets/images/logo/ogImage.jpg',
     },
 }
 }

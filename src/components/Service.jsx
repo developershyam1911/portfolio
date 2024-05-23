@@ -23,7 +23,7 @@ const Service = () => {
     }, []);
     return (
         <>
-         <hr className='w-100'/>
+         {/* <hr className='w-100'/> */}
             <div className="breadcrumb-section section-bg overflow-hidden pos-relative">
                
                 <div className="breadcrumb-shape-top-left"></div>
