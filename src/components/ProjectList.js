@@ -26,10 +26,10 @@ const ProjectList = () => {
                     <div className="row">
                         <div className="col-12">
                             <div className="breadcrumb-content">
-                                <h2 className="title">Completed Projects</h2>
+                                <h2 className="title">Complete Projects</h2>
                                 <ul className="breadcrumb-link">
                                     <li><Link href="/">Home</Link></li>
-                                    <li className="active" aria-current="page">Completed Projects</li>
+                                    <li className="active" aria-current="page">Complete Projects</li>
                                 </ul>
                             </div>
                         </div>

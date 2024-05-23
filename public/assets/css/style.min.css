@@ -2070,6 +2070,63 @@ p:last-child {
     align-items: center;
   }
 }
+@media only screen and (max-width: 600px) {
+    .hero-content .title-large {
+      font-size: 40px;
+      font-weight: 700;
+  }
+  .hero-content {
+    position: absolute;
+    bottom: 178px;
+  }
+  .hero-portrait {
+    position: absolute;
+    left: calc(50% - 36px);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 130px;
+    width: 238px;
+    z-index: -1;
+  }
+  .hero-portrait .image-half-round-shape {
+    bottom: -4%;
+    left: 54%;
+    position: absolute;
+    width: 144px;
+    height: 226px;
+    border-top-right-radius: 150px;
+    border-bottom-right-radius: 150px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: 0;
+    z-index: -1;
+  }
+  .hero-portrait .social-link a:nth-child(1) {
+    left: 208px;
+    top: 23px;
+  }
+  .hero-portrait .social-link a:nth-child(2) {
+    left: 252px;
+    top: 89px;
+  }
+  .service-breadcrumb {
+    padding-top: 16px;
+    padding-bottom: 47px;
+}
+  .hero-portrait .social-link a:nth-child(3) {
+    left: 243px;
+    top: 168px;
+  }
+  .hero-portrait .social-link a:nth-child(4) {
+    left: 193px;
+    top: 221px;
+  }
+  .hero-wrapper {
+    height: 850px;
+    margin-bottom: -150px;
+}
+  }
+
+
 .testimonial-slider-single-item .name {
   font-size: 25px;
   font-weight: 500;

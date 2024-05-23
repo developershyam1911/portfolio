@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { MdDownload, MdPlayArrow, MdPlayCircle } from "react-icons/md";
 
 const Intro = () => {
@@ -15,6 +15,7 @@ const Intro = () => {
                         <h3 className="title-big">Hello! I’m</h3>
                         <h2 className="title-large">{process.env.NEXT_PUBLIC_NAME}</h2>
                         <p>Full Stack Developer </p>
+                        {/* <p style={{textAlign:'justify'}} className="p-2">Expert in creating dynamic and robust web applications using the MERN stack (MongoDB, Express, React, Node.js). Skilled in Laravel, React Native, and Next.js for versatile and scalable solutions.</p> */}
                         <a href={process.env.NEXT_PUBLIC_RESUME} className="btn btn-xl btn-outline-one icon-space-left">Get Resume <MdDownload size={22}/></a>
                         {/* <div className="video-link">
                             <a className="wave-btn" href="https://youtu.be/MKjhBO2xQzg" data-autoplay="true" data-vbtype="video">
@@ -44,11 +45,9 @@ const Intro = () => {
                 <a href={process.env.NEXT_PUBLIC_FACEBOOK_LINK} target="_blank"><FaFacebookF size={22}/></a>
                       <a href={process.env.NEXT_PUBLIC_INSTA_LINK} target="_blank"><FaInstagram size={22} /></a>
                       <a href={process.env.NEXT_PUBLIC_LINKDIN_LINK} target="_blank"><FaLinkedin size={22}/></a>
-                      <a href={process.env.NEXT_PUBLIC_LINKDIN_LINK} target="_blank"><FaLinkedin size={22}/></a>
-                 
+                      <a href={process.env.NEXT_PUBLIC_LINKDIN_LINK} target="_blank"><FaTwitter size={22}/></a>
                 </div>
             </div>
-
         </div>
     </div>
 </div> 

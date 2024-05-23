@@ -5,7 +5,9 @@ import { useState } from "react"
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { toast, ToastContainer } from 'react-toastify';
 import init from "@/firebase";
+import Swal from 'sweetalert2'
 import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa";
+
 const Contact = () => {
     const [data, setData] = useState({
         name: '',
@@ -15,31 +17,32 @@ const Contact = () => {
         mobno: '',
     })
     const formHanler = (e) => {
-        const name=e.target.name;
-        const value=e.target.value;
-        setData({...data,[name]:value})
+        const name = e.target.name;
+        const value = e.target.value;
+        setData({ ...data, [name]: value })
     }
-    const submitHandler =async (e) => {
+    const submitHandler = async (e) => {
         e.preventDefault()
-        const {name, subject, email, mobno, message} = data
-        if(name !== "" && subject !=="" && email !== "" && mobno!=='' && message !== ''){
-               try{
-                   await addDoc(collection(init.db, 'enquiry'),{
-                    name, subject, email, mobno, message, createdAt:serverTimestamp()
-                   })
-                   setData({
+        const { name, subject, email, mobno, message } = data
+        if (name !== "" && subject !== "" && email !== "" && mobno !== '' && message !== '') {
+            try {
+                await addDoc(collection(init.db, 'enquiry'), {
+                    name, subject, email, mobno, message, createdAt: serverTimestamp()
+                })
+                Swal.fire('Your Message Send Successfully', '', 'success');
+                setData({
                     name: '',
                     subject: '',
                     message: '',
                     email: '',
                     mobno: '',
-                   })
-                  alert("Your Message Send Successfully")
-               }catch(err){
-                   console.log(err)
-               }
-        }else{
-            alert("All field is Required")
+                })
+                
+            } catch (err) {
+                console.log(err)
+            }
+        } else {
+            Swal.fire('All field is Required', 'Please fill all the required filled !', 'error');
         }
     }
     return (
@@ -101,11 +104,11 @@ const Contact = () => {
                                     <div class="sidebar-widget-single-area ">
                                         <h3 class="title">Follow Me</h3>
                                         <ul class="social-link">
-                                        <li><a href={process.env.NEXT_PUBLIC_FACEBOOK_LINK} target="_blank"><FaFacebookF size={22}/></a></li>
-                      <li><a href={process.env.NEXT_PUBLIC_INSTA_LINK} target="_blank"><FaInstagram size={22} /></a></li>
-                      <li><a href={process.env.NEXT_PUBLIC_LINKDIN_LINK} target="_blank"><FaLinkedin size={22}/></a></li>
-                 
-        </ul>
+                                            <li><a href={process.env.NEXT_PUBLIC_FACEBOOK_LINK} target="_blank"><FaFacebookF size={22} /></a></li>
+                                            <li><a href={process.env.NEXT_PUBLIC_INSTA_LINK} target="_blank"><FaInstagram size={22} /></a></li>
+                                            <li><a href={process.env.NEXT_PUBLIC_LINKDIN_LINK} target="_blank"><FaLinkedin size={22} /></a></li>
+
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -114,31 +117,28 @@ const Contact = () => {
                                     <div class="content">
                                         <span class="section-tag">Get In Touch</span>
                                         <h2 class="title">If you have any porject or need help. Contact me</h2>
-                                        {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting emndustry lorem Ipsum
-                                            has been the industry's standard dummy text ever since the 1500s, when an unknown print
-                                            only five centuries, but also the leap into electronic.</p> */}
                                     </div>
                                     <div class="contact-form-box">
                                         <form id="contact-form" class="default-form contact-form"  >
                                             <div class="row mb-n6">
                                                 <div class="col-xl-6 mb-6">
                                                     <div class="default-form-group">
-                                                        <input name="name" type="text" placeholder="Name"  value={data.name} onChange={formHanler}  />
+                                                        <input name="name" type="text" placeholder="Name" value={data.name} onChange={formHanler} />
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6 mb-6">
                                                     <div class="default-form-group">
-                                                        <input name="email" type="email"  placeholder="Email"   value={data.email} onChange={formHanler} />
+                                                        <input name="email" type="email" placeholder="Email" value={data.email} onChange={formHanler} />
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6 mb-6">
                                                     <div class="default-form-group">
-                                                        <input name="mobno" type="tel" placeholder="Phone"  value={data.mobno} onChange={formHanler} />
+                                                        <input name="mobno" type="number" max={12} minLength={10} placeholder="Phone" value={data.mobno} onChange={formHanler} />
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6 mb-6">
                                                     <div class="default-form-group">
-                                                        <input name="subject" type="text" placeholder="Subject"  value={data.subject} onChange={formHanler}  />
+                                                        <input name="subject" type="text" placeholder="Subject" value={data.subject} onChange={formHanler} />
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-12 mb-6">
@@ -161,7 +161,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-        <ToastContainer/>
+            <ToastContainer />
         </>
     )
 }

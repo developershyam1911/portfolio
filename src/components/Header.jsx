@@ -13,17 +13,17 @@ const Header = () => {
                 <div className="container">
                     <div className="row justify-content-between align-items-center">
                         <div className="col">
-                            <a href="/" className="header-logo">
+                            <Link href="/" className="header-logo">
                             <Image src={process.env.NEXT_PUBLIC_LOGO} height={120} width={150} quality={90} className="img-fluid" alt="Developer Shyam" />
-                            </a>
+                            </Link>
                         </div>
                         <div className="col-auto">
                             <ul className="header-nav">
                                 <li><Link href='/'>Home</Link></li>
-                                <li><Link href='/services'>Services</Link></li>
-                                <li><Link href='/blog'>Blog</Link></li>
                                 <li><Link href='/about-us'>About Us</Link></li>
-                                <li><Link href='/projects'>Projects</Link></li>
+                                <li><Link href='/services'>Services</Link></li>
+                                <li><Link href='/projects'>Portfolio</Link></li>
+                                <li><Link href='/blog'>Blog</Link></li>
                                 <li><Link href='/contact-us'>Contact Us</Link></li>
                             </ul>
                         </div>
@@ -64,10 +64,10 @@ const Header = () => {
                     <div className="offcanvas-menu">
                         <ul>
                                 <li onClick={()=>setToggle(false)}><Link href='/'>Home</Link></li>
-                                <li onClick={()=>setToggle(false)}><Link href='/services'>Services</Link></li>
-                                <li onClick={()=>setToggle(false)}><Link href='/blog'>Blog</Link></li>
                                 <li onClick={()=>setToggle(false)}><Link href='/about-us'>About Us</Link></li>
-                                <li onClick={()=>setToggle(false)}><Link href='/projects'>Projects</Link></li>
+                                <li onClick={()=>setToggle(false)}><Link href='/services'>Services</Link></li>
+                                <li onClick={()=>setToggle(false)}><Link href='/projects'>Portfolio</Link></li>
+                                <li onClick={()=>setToggle(false)}><Link href='/blog'>Blog</Link></li>
                                 <li onClick={()=>setToggle(false)}><Link href='/contact-us'>Contact Us</Link></li>
                         </ul>
                     </div>

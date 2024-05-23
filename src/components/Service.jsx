@@ -21,29 +21,14 @@ const Service = () => {
     useEffect(() => {
         getServices();
     }, []);
-    // const [data, setData] = useState([
-    //     {
-    //         title:'Web Develop.',
-    //         language:[ 'HTML5','CSS','JavaScript','React Js','Next Js'],
-    //         url:'assets/images/icon/service-icon-2.png'
-    //     },
-    //     {
-    //         title:'App Development',
-    //         language:[ 'Dart','React Native','Flutter','Kotlin','Java'],
-    //         url:'assets/images/icon/service-icon-2.png'
-    //     },
-    //     {
-    //         title:'Digital Marketing',
-    //         language:[ 'Google Campaign','SEO','Social Media Marketing','Google Ranking','Keywords Analizer'],
-    //         url:'assets/images/icon/service-icon-1.png'
-    //     }
-    // ])
     return (
         <>
+         <hr className='w-100'/>
             <div className="breadcrumb-section section-bg overflow-hidden pos-relative">
+               
                 <div className="breadcrumb-shape-top-left"></div>
                 <div className="breadcrumb-shape-bottom-right"></div>
-                <div className="breadcrumb-box">
+                <div className="breadcrumb-box service-breadcrumb">
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
