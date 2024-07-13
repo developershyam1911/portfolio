@@ -20,7 +20,7 @@ export async function generateMetadata({ params }) {
         apple: "/images/favicon.png",
       },
       openGraph: {
-        title: item[0]?.desc,
+        title: item[0]?.title,
         description: item[0]?.desc,
         images: item[0]?.image,
       },
