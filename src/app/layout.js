@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href={process.env.NEXT_PUBLIC_FAVICON} />
       </head>
       <body className={inter.className}>
-        <main class="main-wrapper">
+        <main className="main-wrapper">
           <Header />
           {children}
           <Footer />
