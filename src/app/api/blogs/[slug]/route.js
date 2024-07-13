@@ -15,7 +15,7 @@ export async function getServerSideProps({ query }) {
       title: doc.data()?.metaTitle,
       image: doc.data()?.image,
       desc: doc.data()?.metaDesc,
-      keyword: doc.data()?.keyword,
+      keyword: doc.data()?.keywords,
       time: doc.data()?.createdAt,
     }));
     console.log(res);
@@ -43,7 +43,7 @@ export async function GET(req) {
         title: doc.data().metaTitle,
         image: doc.data().image,
         desc: doc.data().metaDesc,
-        keyword: doc.data().keyword,
+        keyword: doc.data().keywords,
         time: doc.data().createdAt,
       }))
     );

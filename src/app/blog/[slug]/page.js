@@ -13,14 +13,14 @@ export async function generateMetadata({ params }) {
     return {
       title: item[0]?.title,
       description: item[0]?.desc,
-      keywords: [item[0]?.keyword.split(",")],
+      keywords: [item[0]?.keyword],
       icons: {
         icon: "/images/favicon.png",
         shortcut: "/images/favicon.png",
         apple: "/images/favicon.png",
       },
       openGraph: {
-        title: item[0]?.title,
+        title: item[0]?.desc,
         description: item[0]?.desc,
         images: item[0]?.image,
       },
