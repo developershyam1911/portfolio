@@ -50,12 +50,12 @@ const Skills = () => {
               <div className="section-content">
                 <span className="section-tag">Special Skills</span>
                 <h2 className="section-title">My Special Skill Field Here.</h2>
-                <a
+                {/* <a
                   href={process.env.NEXT_PUBLIC_RESUME}
                   className="btn btn-xl btn-outline-one icon-space-left"
                 >
                   Get Resume <MdDownload size={22} />
-                </a>
+                </a> */}
               </div>
             </div>
             <div className="col-xl-6 col-xxl-6 offset-xxl-1">

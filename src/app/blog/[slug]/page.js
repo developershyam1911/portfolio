@@ -1,6 +1,10 @@
-import SingleBlog from "@/components/SingleBlog";
+import dynamic from "next/dynamic";
+const SingleBlog = dynamic(() => import("@/components/SingleBlog"), {
+  ssr: false,
+});
 import { ENDPOINT } from "@/config/constant";
 import axios from "axios";
+
 export async function generateMetadata({ params }) {
   const { slug } = params;
   try {
@@ -34,9 +38,9 @@ const page = ({ params }) => {
   const { slug } = params;
 
   return (
-    <>
+    <div>
       <SingleBlog slug={slug} />
-    </>
+    </div>
   );
 };
 

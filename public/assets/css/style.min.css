@@ -1021,7 +1021,7 @@ p:last-child {
 }
 @media (min-width: 1200px) {
   .hero-wrapper {
-    height: 910px;
+    height:800px;
   }
 }
 @media (min-width: 1800px) {

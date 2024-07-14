@@ -20,7 +20,7 @@ const Intro = () => {
               <div className="hero-content">
                 <h3 className="title-big">Hello! I’m</h3>
                 <h2 className="title-large">{process.env.NEXT_PUBLIC_NAME}</h2>
-                <p>Full Stack Developer </p>
+                <h2 className="title mb-4">Full Stack Developer </h2>
                 {/* <p style={{textAlign:'justify'}} className="p-2">Expert in creating dynamic and robust web applications using the MERN stack (MongoDB, Express, React, Node.js). Skilled in Laravel, React Native, and Next.js for versatile and scalable solutions.</p> */}
                 <a
                   href={process.env.NEXT_PUBLIC_RESUME}
@@ -38,7 +38,7 @@ const Intro = () => {
             </div>
           </div>
         </div>
-        <div className="hero-shape hero-top-shape">
+        {/* <div className="hero-shape hero-top-shape">
           <span></span>
           <span></span>
           <span></span>
@@ -47,7 +47,7 @@ const Intro = () => {
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </div> */}
         <div className="hero-portrait">
           <div className="image">
             <Image
