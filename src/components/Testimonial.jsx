@@ -35,7 +35,9 @@ const Testimonial = () => {
             <div className="col-12 col-xl-12 d-block d-md-flex justify-content-between">
               <div className="section-content pos-relative">
                 <span className="section-tag">Testimonial</span>
-                <h2 className="section-title">Satisfied Clients Say</h2>
+                <h2 className="section-title">
+                  Feedback from Our Delighted Clients
+                </h2>
               </div>
             </div>
           </div>

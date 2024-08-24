@@ -57,9 +57,7 @@ const Service = () => {
             <div className="col-12">
               <div className="section-content">
                 <span className="section-tag">My Services</span>
-                <h2 className="section-title">
-                  Service Provide For My Clients.
-                </h2>
+                <h2 className="section-title">Services Offered To Clients.</h2>
               </div>
             </div>
           </div>

@@ -33,13 +33,13 @@ const ProjectList = () => {
             <div className="row">
               <div className="col-12">
                 <div className="breadcrumb-content">
-                  <h2 className="title">Complete Projects</h2>
+                  <h2 className="title">My Project Portfolio</h2>
                   <ul className="breadcrumb-link">
                     <li>
                       <Link href="/">Home</Link>
                     </li>
                     <li className="active" aria-current="page">
-                      Complete Projects
+                      My Project Portfolio
                     </li>
                   </ul>
                 </div>

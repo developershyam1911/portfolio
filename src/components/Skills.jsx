@@ -48,8 +48,8 @@ const Skills = () => {
           <div className="row align-items-center">
             <div className="col-xl-6 col-xxl-5">
               <div className="section-content">
-                <span className="section-tag">Special Skills</span>
-                <h2 className="section-title">My Special Skill Field Here.</h2>
+                <span className="section-tag">Skills</span>
+                <h2 className="section-title">My Core Competencies</h2>
                 {/* <a
                   href={process.env.NEXT_PUBLIC_RESUME}
                   className="btn btn-xl btn-outline-one icon-space-left"

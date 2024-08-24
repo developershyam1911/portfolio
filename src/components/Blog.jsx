@@ -39,12 +39,16 @@ const Blog = () => {
       <div className="blog-feed-display-box">
         <div className="container">
           <div className="row">
-            <div className="col">
+            <div className="section-content pos-relative">
+              <span className="section-tag">Blog Post</span>
+              <h2 className="section-title">Latest Tips & Tricks</h2>
+            </div>
+            {/* <div className="col">
               <div className="section-content pos-relative text-center">
                 <span className="section-tag">Blog Post</span>
                 <h2 className="section-title">Latest Tips & Tricks</h2>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="blog-feed-display-wrapper">
             <div className="row mb-n5">
